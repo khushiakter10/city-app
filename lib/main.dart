@@ -7,10 +7,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
+import 'package:thibaudbdx_project/feature/home/presentation/create_voice_note_screen.dart';
+import 'package:thibaudbdx_project/feature/home/presentation/update_customer_screen.dart';
 import '/helpers/all_routes.dart';
 import 'constants/app_constants.dart';
-import 'feature/home/presentation/update_customer_screen.dart';
-import 'feature/import_from_goole/presentation/prospect_nare_me_screen.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/di.dart';
 import 'helpers/helper_methods.dart';
@@ -34,7 +34,7 @@ void main() async {
   }
 
 
-  runApp( MyApp(),
+  runApp( const MyApp(),
     // DevicePreview(
     //   enabled: !kReleaseMode,
     //   builder: (context) => MyApp(),
@@ -110,7 +110,7 @@ class UtillScreenMobile extends StatelessWidget {
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
 
-            home:  UpdateCustomerScreen(),
+            home:    CreateVoiceNoteScreen (),
           ),
         );
       },

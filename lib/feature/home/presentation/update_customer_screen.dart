@@ -97,7 +97,6 @@ class _UpdateCustomerScreenState extends State<UpdateCustomerScreen> {
             Text('Phone Number',
                 style: TextFontStyle.headline18c3F3B3Bpoppinsw500),
             UIHelper.verticalSpace(8.h),
-
             IntlPhoneField(
               controller: phoneNumberController,
               initialCountryCode: 'US',
@@ -123,7 +122,6 @@ class _UpdateCustomerScreenState extends State<UpdateCustomerScreen> {
               },
               onChanged: (phone) {
                 setState(() {
-                  // Remove spaces, dashes, etc. from the number
                   String rawNumber = phone.number.replaceAll(RegExp(r'\D'), '');
                   fullPhoneNumber = '$countryCode$rawNumber';
                 });
